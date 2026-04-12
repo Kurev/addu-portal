@@ -1,59 +1,74 @@
-# AdduAlumniPortal
+# Montes
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 21.2.7.
+**Framework:** Angular
+**Module:** Authentication UI (Login & Forgot Password)
 
-## Development server
+---
 
-To start a local development server, run:
+## Installation
 
-```bash
-ng serve
-```
+A step-by-step guide to replicate this project and run it on a different computer.
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+### Prerequisites
 
-## Code scaffolding
+Make sure the following are installed on your machine:
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+- [Node.js v18 or higher](https://nodejs.org) — required to run Angular
+- [Git](https://git-scm.com) — required to clone the repository
 
-```bash
-ng generate component component-name
-```
+### Steps
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+1. **Install Angular CLI globally**
+   ```bash
+   npm install -g @angular/cli
+   ```
 
-```bash
-ng generate --help
-```
+2. **Clone this repository**
+   ```bash
+   git clone https://github.com/YOUR_USERNAME/YOUR_REPO_NAME.git
+   ```
 
-## Building
+3. **Navigate into the project folder**
+   ```bash
+   cd YOUR_REPO_NAME
+   ```
 
-To build the project run:
+4. **Install project dependencies**
+   ```bash
+   npm install
+   ```
 
-```bash
-ng build
-```
+5. **Run the development server**
+   ```bash
+   ng serve
+   ```
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+6. **Open the app in your browser**
+   ```
+   http://localhost:4200
+   ```
 
-## Running unit tests
+---
 
-To execute unit tests with the [Vitest](https://vitest.dev/) test runner, use the following command:
+## AI Tools Used
 
-```bash
-ng test
-```
+- **Claude (Anthropic)** — used for generating Angular component code, CSS styling, and README structure
 
-## Running end-to-end tests
+---
 
-For end-to-end (e2e) testing, run:
+## Prompt
 
-```bash
-ng e2e
-```
+> "Replicate the attached mobile UI screens (Login + Forgot Password) as Angular components with pixel-accurate fidelity to the original design — same layout, typography weight, color palette (navy #1a3a6b, light gray background, white cards), input field styling, button shapes, and tab switcher. Use a placeholder SVG badge as the logo. Provide the full Angular project setup walkthrough (Node.js → Angular CLI → component files) alongside the complete source code."
 
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
+---
 
-## Additional Resources
+## Screenshots
 
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+> Replace the images below with your actual full-browser screenshots.
+> Save your screenshot files in a `screenshots/` folder at the root of your project.
+
+### Login Page
+![Login Page](public/login.png)
+
+### Forgot Password Page
+![Forgot Password Page](public/forgot.png)
