@@ -1,0 +1,337 @@
+/* ─── SCREEN WRAPPER ─────────────────────────────────────── */
+.screen {
+  background: #e8edf4;
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 20px;
+}
+
+.screen--card {
+  background: #e8edf4;
+}
+
+/* ─── LOGIN CONTAINER ────────────────────────────────────── */
+.login-container {
+  width: 100%;
+  max-width: 400px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0;
+}
+
+/* ─── LOGO ───────────────────────────────────────────────── */
+.logo-wrap {
+  margin-bottom: 24px;
+  filter: drop-shadow(0 4px 16px rgba(26, 58, 107, 0.18));
+}
+
+.logo-svg {
+  width: 110px;
+  height: 110px;
+}
+
+/* ─── HEADING ────────────────────────────────────────────── */
+.title {
+  font-size: 26px;
+  font-weight: 800;
+  color: #111827;
+  text-align: center;
+  margin-bottom: 6px;
+  letter-spacing: -0.3px;
+}
+
+.subtitle {
+  font-size: 14px;
+  color: #6b7280;
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+/* ─── FORM GROUPS ────────────────────────────────────────── */
+.form-group {
+  width: 100%;
+  margin-bottom: 16px;
+}
+
+.form-label {
+  display: block;
+  font-size: 13.5px;
+  font-weight: 700;
+  color: #111827;
+  margin-bottom: 8px;
+}
+
+.input-wrap {
+  position: relative;
+  width: 100%;
+}
+
+.form-input {
+  width: 100%;
+  padding: 15px 18px;
+  background: white;
+  border: 1.5px solid #e5e7eb;
+  border-radius: 14px;
+  font-size: 14px;
+  color: #374151;
+  outline: none;
+  transition: border-color 0.2s, box-shadow 0.2s;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.04);
+}
+
+.form-input::placeholder {
+  color: #9ca3af;
+}
+
+.form-input:focus {
+  border-color: #1a3a6b;
+  box-shadow: 0 0 0 3px rgba(26, 58, 107, 0.1);
+}
+
+/* Input with right icon (password toggle) */
+.input-wrap--icon .form-input {
+  padding-right: 50px;
+}
+
+/* Input with left icon (forgot password fields) */
+.input-wrap--icon-left {
+  position: relative;
+}
+
+.input-icon {
+  position: absolute;
+  left: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 18px;
+  height: 18px;
+  pointer-events: none;
+}
+
+.form-input--padded {
+  padding-left: 42px;
+}
+
+/* Eye toggle button */
+.icon-btn {
+  position: absolute;
+  right: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 4px;
+  color: #9ca3af;
+  display: flex;
+  align-items: center;
+}
+
+.icon-btn svg {
+  width: 20px;
+  height: 20px;
+}
+
+/* ─── FORGOT ROW ─────────────────────────────────────────── */
+.forgot-row {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 24px;
+  margin-top: 4px;
+}
+
+/* ─── BUTTONS ────────────────────────────────────────────── */
+.btn-primary {
+  width: 100%;
+  padding: 16px;
+  background: #1a3a6b;
+  color: white;
+  font-size: 16px;
+  font-weight: 700;
+  border: none;
+  border-radius: 14px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  transition: background 0.2s, transform 0.1s, box-shadow 0.2s;
+  box-shadow: 0 4px 14px rgba(26, 58, 107, 0.35);
+  letter-spacing: 0.2px;
+}
+
+.btn-primary svg {
+  width: 20px;
+  height: 20px;
+}
+
+.btn-primary:hover {
+  background: #14306a;
+  box-shadow: 0 6px 18px rgba(26, 58, 107, 0.45);
+}
+
+.btn-primary:active {
+  transform: scale(0.98);
+}
+
+.link-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 13.5px;
+  color: #1a3a6b;
+  font-weight: 600;
+  padding: 0;
+  text-decoration: none;
+}
+
+.link-btn--bold {
+  font-weight: 700;
+  font-size: 14px;
+}
+
+/* ─── BOTTOM TEXT ────────────────────────────────────────── */
+.bottom-text {
+  margin-top: 22px;
+  font-size: 14px;
+  color: #6b7280;
+  text-align: center;
+}
+
+.bottom-text--muted {
+  font-size: 12.5px;
+  color: #9ca3af;
+  margin-top: 24px;
+  line-height: 1.6;
+}
+
+/* ─── FORGOT CONTAINER ───────────────────────────────────── */
+.forgot-container {
+  background: white;
+  border-radius: 24px;
+  padding: 28px 28px 32px;
+  width: 100%;
+  max-width: 420px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.back-btn {
+  width: 100%;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: 700;
+  color: #111827;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 0;
+  margin-bottom: 20px;
+}
+
+.back-btn svg {
+  width: 20px;
+  height: 20px;
+}
+
+.divider {
+  width: calc(100% + 56px);
+  height: 1px;
+  background: #f3f4f6;
+  margin-bottom: 28px;
+}
+
+.reset-icon-wrap {
+  width: 64px;
+  height: 64px;
+  background: #eff6ff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.reset-icon-wrap svg {
+  width: 30px;
+  height: 30px;
+}
+
+.forgot-title {
+  font-size: 22px;
+  font-weight: 800;
+  color: #111827;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.forgot-desc {
+  font-size: 13.5px;
+  color: #6b7280;
+  text-align: center;
+  line-height: 1.6;
+  margin-bottom: 24px;
+  max-width: 300px;
+}
+
+/* ─── TABS ───────────────────────────────────────────────── */
+.tab-row {
+  display: flex;
+  width: 100%;
+  background: #f3f4f6;
+  border-radius: 12px;
+  padding: 4px;
+  gap: 4px;
+  margin-bottom: 24px;
+}
+
+.tab-btn {
+  flex: 1;
+  padding: 10px 8px;
+  background: transparent;
+  border: none;
+  border-radius: 10px;
+  font-size: 13px;
+  font-weight: 600;
+  color: #6b7280;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  transition: background 0.18s, color 0.18s, box-shadow 0.18s;
+}
+
+.tab-btn svg {
+  width: 15px;
+  height: 15px;
+}
+
+.tab-btn--active {
+  background: white;
+  color: #1a3a6b;
+  box-shadow: 0 1px 6px rgba(0,0,0,0.1);
+}
+
+/* ─── HINT TEXT ──────────────────────────────────────────── */
+.hint-text {
+  font-size: 12px;
+  color: #9ca3af;
+  margin-top: 7px;
+}
+
+.logo-img {
+  width: 110px;
+  height: 110px;
+  object-fit: contain;
+  filter: drop-shadow(0 4px 16px rgba(26, 58, 107, 0.18));
+}
