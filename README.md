@@ -64,9 +64,6 @@ Make sure the following are installed on your machine:
 
 ## Screenshots
 
-> Replace the images below with your actual full-browser screenshots.
-> Save your screenshot files in a `screenshots/` folder at the root of your project.
-
 ### Login Page
 ![Login Page](public/login.png)
 
