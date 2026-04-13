@@ -1,7 +1,7 @@
 # Montes
 
 **Framework:** Angular
-**Module:** Authentication UI (Login & Forgot Password)
+**Module:** Authentication UI (Login & Forgot Password) + Alumni Dashboard
 
 ---
 
@@ -69,3 +69,15 @@ Make sure the following are installed on your machine:
 
 ### Forgot Password Page
 ![Forgot Password Page](public/forgot.png)
+
+### Dashboard – Profile
+![Dashboard Profile](public/profile.png)
+
+### Dashboard – My Impact
+![Dashboard My Impact](public/impact.png)
+
+### Dashboard – Projects
+![Dashboard Projects](public/project.png)
+
+### Dashboard – Donations
+![Dashboard Donations](public/donation.png)
