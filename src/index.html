@@ -1,13 +1,75 @@
-<!doctype html>
+
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <title>AdduAlumniPortal</title>
-  <base href="/">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <meta charset="utf-8" />
+  <title>AdDU Alumni Portal</title>
+
+  <!-- Viewport -->
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <!-- PWA Meta Tags -->
+  <meta name="theme-color" content="#1e3a5f" />
+  <meta name="mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <meta name="apple-mobile-web-app-title" content="AdDU Alumni" />
+  <meta name="application-name" content="AdDU Alumni Portal" />
+  <meta name="msapplication-TileColor" content="#0d1f3c" />
+  <meta name="msapplication-TileImage" content="/icons/icon-144x144.png" />
+
+  <!-- SEO / Description -->
+  <meta name="description"
+        content="Ateneo de Davao University Alumni Portal — stay connected, track your impact, and support the next generation of Blue Knights." />
+
+  <!-- Manifest -->
+  <link rel="manifest" href="manifest.json" />
+
+  <!-- Apple Touch Icons -->
+  <link rel="apple-touch-icon" href="/icons/icon-152x152.png" />
+  <link rel="apple-touch-icon" sizes="72x72"   href="/icons/icon-72x72.png" />
+  <link rel="apple-touch-icon" sizes="96x96"   href="/icons/icon-96x96.png" />
+  <link rel="apple-touch-icon" sizes="128x128" href="/icons/icon-128x128.png" />
+  <link rel="apple-touch-icon" sizes="144x144" href="/icons/icon-144x144.png" />
+  <link rel="apple-touch-icon" sizes="152x152" href="/icons/icon-152x152.png" />
+  <link rel="apple-touch-icon" sizes="192x192" href="/icons/icon-192x192.png" />
+
+  <!-- Standard Favicon -->
+  <link rel="icon" type="image/x-icon" href="favicon.ico" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/icons/icon-96x96.png" />
+
+  <!-- Google Fonts (preconnect for speed) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 </head>
 <body>
   <app-root></app-root>
+
+  <!-- Service Worker Registration -->
+  <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker
+          .register('/service-worker.js')
+          .then(reg => {
+            console.log('[App] Service Worker registered. Scope:', reg.scope);
+
+            // Notify user when a new version is available
+            reg.addEventListener('updatefound', () => {
+              const newWorker = reg.installing;
+              newWorker.addEventListener('statechange', () => {
+                if (
+                  newWorker.state === 'installed' &&
+                  navigator.serviceWorker.controller
+                ) {
+                  console.log('[App] New version available — refresh to update.');
+                  // Optional: show a toast/banner here
+                }
+              });
+            });
+          })
+          .catch(err => console.error('[App] Service Worker registration failed:', err));
+      });
+    }
+  </script>
 </body>
 </html>
